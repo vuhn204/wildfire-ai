@@ -1,10 +1,10 @@
 from fastapi import FastAPI
 
+from wildfire_ai.api.routes.health import router as health_router
+
 app = FastAPI(
     title = "Wildfire AI API",
     version = "0.1.0",
 )
 
-@app.get("/health")
-def health_check():
-    return {"status": "healthy"}
+app.include_router(health_router)
