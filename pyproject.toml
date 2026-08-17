@@ -7,7 +7,10 @@ authors = [
     { name = "Mateo Pozo", email = "mateopgarcia24@gmail.com" }
 ]
 requires-python = ">=3.12,<3.13"
-dependencies = []
+dependencies = [
+    "fastapi>=0.141.1",
+    "uvicorn[standard]>=0.52.3",
+]
 
 [project.scripts]
 wildfire-ai = "wildfire_ai:main"
