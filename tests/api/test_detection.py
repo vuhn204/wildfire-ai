@@ -20,7 +20,8 @@ def test_detect_accepts_jpeg():
     assert response.status_code == 200
     assert response.json() == {
         "filename": "test.jpg",
-        "content_type": "image/jpeg",
+        "detections": [],
+        "inference_time_ms": 0.0,
     }
 
 def test_detect_rejects_unsupported_media_type():
@@ -88,5 +89,6 @@ def test_detect_accepts_png():
     assert response.status_code == 200
     assert response.json() == {
         "filename": "test.png",
-        "content_type": "image/png",
+        "detections": [],
+        "inference_time_ms": 0.0,
     }
