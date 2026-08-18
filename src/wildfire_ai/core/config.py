@@ -12,6 +12,13 @@ class Settings(BaseSettings):
     app_version: str = "0.1.0"
     environment: Environment = Environment.DEVELOPMENT
 
+    max_upload_size_mb: int = 10
+    allowed_image_types: list[str] = [
+        "image/jpeg",
+        "image/png",
+        "image/webp",
+    ]
+
     model_config = SettingsConfigDict(
         env_file=".env",
         env_file_encoding="utf-8",
