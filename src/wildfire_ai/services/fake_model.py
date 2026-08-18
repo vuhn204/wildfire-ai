@@ -1,8 +1,6 @@
-from typing import Protocol
-
 from wildfire_ai.schemas.detection import Detection
 
 
-class DetectionModel(Protocol):
+class FakeDetectionModel:
     def predict(self, image: bytes) -> list[Detection]:
-        ...
+        return []
